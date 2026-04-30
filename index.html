@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>আব্দুল্লাহ আল মাসুদ | পূর্ণাঙ্গ জীবনবৃত্তান্ত</title>
+  
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-deep: #0a0f1c;
+      --bg-card: #111827;
+      --bg-soft: #0f1422;
+      --primary-green: #2dd4bf;
+      --primary-green-dark: #14b8a6;
+      --gold-accent: #fbbf24;
+      --text-light: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-dim: rgba(45, 212, 191, 0.15);
+      --shadow-glow: 0 15px 35px -12px rgba(45, 212, 191, 0.2);
+    }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* subtle background pattern */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 25% 30%, rgba(45, 212, 191, 0.05) 0%, transparent 55%),
+                  radial-gradient(circle at 85% 70%, rgba(251, 191, 36, 0.04) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: -2;
+    }
+
+    /* navigation */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(18px);
+      background: rgba(10, 15, 28, 0.85);
+      border-bottom: 1px solid var(--border-dim);
+      padding: 0.8rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-family: 'Noto Serif Bengali', serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, var(--primary-green), var(--gold-accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-green);
+      text-shadow: 0 0 5px rgba(45, 212, 191, 0.5);
+    }
+
+    /* hero */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      padding: 5rem 2rem 3rem;
+      position: relative;
+    }
+
+    .hero-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      gap: 0.5rem;
+      background: rgba(45, 212, 191, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      padding: 0.3rem 1.2rem;
+      border-radius: 60px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--primary-green);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Noto Serif Bengali', serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .highlight {
+      color: var(--primary-green);
+    }
+
+    .hero-desc {
+      max-width: 600px;
+      color: var(--text-muted);
+      margin: 1rem 0 1.8rem;
+      font-size: 1rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .btn-primary {
+      background: var(--primary-green);
+      color: #0a0f1c;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px -5px rgba(45, 212, 191, 0.4);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--primary-green);
+      color: var(--primary-green);
+      background: transparent;
+      padding: 0.7rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: rgba(45, 212, 191, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* sections */
+    .section {
+      padding: 4rem 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif Bengali', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      border-left: 4px solid var(--primary-green);
+      padding-left: 1rem;
+      background: linear-gradient(to right, #fff, var(--primary-green));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-dim);
+      border-radius: 28px;
+      padding: 1.6rem 1.8rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.3);
+    }
+
+    .card:hover {
+      border-color: var(--primary-green);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .info-table td, .info-table th {
+      padding: 0.7rem 0.3rem;
+      border-bottom: 1px solid var(--border-dim);
+      vertical-align: top;
+    }
+
+    .info-table th {
+      color: var(--primary-green);
+      font-weight: 600;
+      width: 35%;
+    }
+
+    .skill-badge {
+      background: rgba(45, 212, 191, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      display: inline-block;
+      margin: 0.25rem;
+    }
+
+    .family-tree {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 20px;
+      padding: 0.8rem;
+    }
+
+    hr {
+      border-color: var(--border-dim);
+      margin: 1rem 0;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border-dim);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        justify-content: center;
+      }
+      .nav-links {
+        justify-content: center;
+        gap: 1rem;
+      }
+      .section {
+        padding: 2.5rem 1rem;
+      }
+      .card {
+        padding: 1.2rem;
+      }
+    }
+
+    .icon-spacing i {
+      margin-right: 6px;
+      color: var(--primary-green);
+    }
+
+    .quote {
+      font-style: italic;
+      border-left: 3px solid var(--gold-accent);
+      padding-left: 1rem;
+      margin-top: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo"><i class="fas fa-leaf"></i> Abdullah Al Masud</div>
+  <div class="nav-links">
+    <a href="#about">পরিচিতি</a>
+    <a href="#edu">শিক্ষা</a>
+    <a href="#cv">বিস্তারিত CV</a>
+    <a href="#family">পরিবার</a>
+    <a href="#training">প্রশিক্ষণ</a>
+    <a href="#contact">যোগাযোগ</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-badge">
+      <i class="fas fa-quran"></i> "রাব্বি জিদনি ইলমা"
+    </div>
+    <h1>আব্দুল্লাহ আল মাসুদ<br><span class="highlight">হাদীস ও ইসলামিক স্টাডিজ</span></h1>
+    <div class="hero-desc">
+      হাফেজুল কুরআন, শিক্ষার্থী ও গবেষক | আল-হাদিস ও ইসলামিক স্টাডিজ বিভাগ, ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়া। 
+      দ্বীনী জ্ঞান ও আধুনিক দক্ষতার সমন্বয়ে উম্মাহর সেবায় নিয়োজিত।
+    </div>
+    <div class="btn-group">
+      <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> যোগাযোগ করুন</a>
+      <a href="#cv" class="btn-outline"><i class="fas fa-file-alt"></i> পূর্ণ CV দেখুন</a>
+    </div>
+  </div>
+</section>
+
+<!-- About + basic info -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-title">পরিচিতি ও ব্যক্তিগত তথ্য</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3 style="color:var(--primary-green); margin-bottom: 1rem;"><i class="fas fa-user-circle"></i> প্রোফাইল সংক্ষেপ</h3>
+        <p>আব্দুল্লাহ আল মাসুদ ৩০ জুন ২০০৩ সালে সাতক্ষীরা জেলায় জন্মগ্রহণ করেন। হেফজুল কুরআন সম্পন্ন করে মাদ্রাসা শিক্ষা ব্যবস্থায় দাখিল, আলিম ও ফাজিল সম্পন্ন করেন। বর্তমানে ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়ার আল হাদিস এন্ড ইসলামিক স্টাডিজ বিভাগে ৪র্থ বর্ষে অধ্যয়নরত। পাশাপাশি কামিল (মাস্টার্স) কোর্স সম্পাদন করছেন কুওয়াতুল ইসলাম কামিল মাদ্রাসা, কুষ্টিয়া থেকে। দ্বীনি চেতনা ও আধুনিক সফটস্কিলের সমন্বয়ে কাজ করতে আগ্রহী।</p>
+        <div class="quote">
+          <i class="fas fa-heart" style="color: var(--gold-accent);"></i> লক্ষ্য: কুরআন-সুন্নাহর আলোয় সমাজ গঠনে ইতিবাচক অবদান রাখা।
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="color:var(--primary-green); margin-bottom: 1rem;"><i class="fas fa-address-card"></i> ব্যক্তিগত তথ্য</h3>
+        <table class="info-table">
+          <tr><th>নাম</th><td>আব্দুল্লাহ আল মাসুদ</td></tr>
+          <tr><th>পিতার নাম</th><td>আব্দুল মাজেদ</td></tr>
+          <tr><th>মাতার নাম</th><td>(ইন্তেকাল করেছেন - ১৪ই ডিসেম্বর ২০২৪)</td></tr>
+          <tr><th>জন্ম তারিখ</th><td>৩০ জুন ২০০৩ (NID অনুযায়ী)</td></tr>
+          <tr><th>উচ্চতা/ওজন</th><td>৫'৬" / ৬০-৬১ কেজি</td></tr>
+          <tr><th>রক্তের গ্রুপ</th><td>O+</td></tr>
+          <tr><th>জাতীয়তা</th><td>বাংলাদেশী</td></tr>
+          <tr><th>স্থায়ী ঠিকানা</th><td>ভালুকা চাঁদপুর, সাতক্ষীরা সদর, সাতক্ষীরা</td></tr>
+          <tr><th>বর্তমান ঠিকানা</th><td>ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়া (হলে অবস্থান)</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education + honors -->
+<section class="section" id="edu" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section-title"><i class="fas fa-graduation-cap"></i> শিক্ষাগত যোগ্যতা</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3><i class="fas fa-mosque"></i> মাদ্রাসা ও বিশ্ববিদ্যালয়</h3>
+        <table class="info-table">
+          <tr><th>হেফজ সম্পন্ন</th><td>২০১৪</td></tr>
+          <tr><th>জেডিসি (JSC) ২০১৬</th><td>A+ | ভালুকা চাঁদপুর দাখিল মাদ্রাসা</td></tr>
+          <tr><th>দাখিল (SSC) ২০১৯</th><td>GPA 4.69 | ভালুকা চাঁদপুর দাখিল মাদ্রাসা</td></tr>
+          <tr><th>আলিম (HSC) ২০২১</th><td>GPA 4.86 | দারুল কোরআন সিদ্দিকিয়া কামিল মাদ্রাসা, খুলনা</td></tr>
+          <tr><th>ফাজিল (ডিগ্রি)</th><td>GPA 4.33 | পাটকেলঘাটা আল-আমিন ফাজিল মাদ্রাসা</td></tr>
+          <tr><th>অনার্স (৪র্থ বর্ষ)</th><td>আল হাদিস এন্ড ইসলামিক স্টাডিজ, ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়া<br> বর্তমান CGPA: 3.84 (out of 4.00)</td></tr>
+          <tr><th>কামিল (মাস্টার্স)</th><td>চলমান | কুওয়াতুল ইসলাম কামিল মাদ্রাসা, কুষ্টিয়া</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-certificate"></i> প্রশিক্ষণ ও দক্ষতা</h3>
+        <div>
+          <span class="skill-badge">Office Application</span>
+          <span class="skill-badge">আরবি ভাষা শিক্ষা (DRTC, ঝিনাইদহ)</span>
+          <span class="skill-badge">ইংরেজি ভাষা কোর্স</span>
+          <span class="skill-badge">Leader Zone, Dhaka</span>
+          <span class="skill-badge">তরজমাতুল কুরআন ওয়াত-তাফসীর - DRTC</span>
+          <span class="skill-badge">হাদিস ও উলুমুল হাদিস - DRTC</span>
+          <span class="skill-badge">ডিবেট - সাদ্দাম হোসেন হল ডিবেটিং সোসাইটি, ইবি</span>
+          <span class="skill-badge">গোল্ডেন ক্যাটাগরি সদস্য (সর্বোচ্চ) - ডিবেট বাংলাদেশ</span>
+        </div>
+        <hr>
+        <p><strong><i class="fas fa-language"></i> ভাষা দক্ষতা:</strong> বাংলা (মাতৃভাষা), আরবি (একাডেমিক ও গবেষণা), ইংরেজি (মাধ্যমিক-উচ্চতর), হিন্দি/উর্দু (কথোপকথন)</p>
+        <p><strong><i class="fas fa-chart-line"></i> ব্যক্তিগত গুণ:</strong> দ্রুত শিখন, কুরআন-হাদীস অধ্যয়নে আগ্রহী, পাবলিক স্পিকিং, সংগঠন ও দলবদ্ধ কাজে দক্ষ।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed CV / Full profile -->
+<section class="section" id="cv">
+  <div class="container">
+    <div class="section-title">📄 বিস্তারিত জীবনবৃত্তান্ত (CV)</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3><i class="fas fa-bullseye"></i> ক্যারিয়ার অবজেকটিভ</h3>
+        <p>ইসলামিক নলেজ ও রিসার্চের মাধ্যমে সমাজ সংস্কার ও দ্বীনি শিক্ষার প্রসার ঘটানো। হাদীস শিক্ষার আলোকে প্রামাণিক ইসলামী কন্টেন্ট তৈরিতে মনোনিবেশ। পাশাপাশি আধুনিক যোগাযোগ ও আইসিটি দক্ষতা ব্যবহার করে ডিজিটাল দাওয়াহ কার্যক্রম পরিচালনা করা।</p>
+        <h3 style="margin-top: 1rem;"><i class="fas fa-university"></i> উচ্চশিক্ষা ও বিশেষায়ন</h3>
+        <p>বর্তমানে আল হাদিস এন্ড ইসলামিক স্টাডিজ বিভাগে ৪র্থ বর্ষ - থিসিস ও গবেষণারত। কামিল (মাস্টার্স) পর্যায়ে হাদীস ও উলূমুল হাদীসে গভীর জ্ঞান অর্জন। এছাড়াও ডিবেট ও পাবলিক স্পিকিংয়ে জাতীয় পর্যায়ে স্বীকৃতি।</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-trophy"></i> অর্জন ও বিশেষ যোগ্যতা</h3>
+        <ul style="margin-left: 1.2rem; color: var(--text-muted);">
+          <li>ডিবেট বাংলাদেশ - গোল্ডেন ক্যাটাগরি সদস্য (সর্বোচ্চ কৃতিত্ব)</li>
+          <li>সাদ্দাম হোসেন হল ডিবেটিং সোসাইটির সক্রিয় সদস্য, ইসলামী বিশ্ববিদ্যালয়</li>
+          <li>DRTC ঝিনাইদহ থেকে আরবি ভাষা, তাফসির ও হাদিস প্রশিক্ষণ সম্পন্ন</li>
+          <li>Leader Zone Dhaka কর্তৃক নেতৃত্ব ও যোগাযোগ বিষয়ক সার্টিফিকেট</li>
+          <li>কম্পিউটার অফিস অ্যাপ্লিকেশন দক্ষতা (MS Word, Excel, PowerPoint)</li>
+        </ul>
+        <div style="margin-top: 1rem;">
+          <i class="fas fa-book-open"></i> <strong>গবেষণা আগ্রহ:</strong> হাদীস শাস্ত্র, সমকালীন ফতোয়া, কুরআন-সুন্নাহর প্রাসঙ্গিকতা ও ইসলামি বিশ্বকোষ।
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Family information -->
+<section class="section" id="family" style="background: var(--bg-soft);">
+  <div class="container">
+    <div class="section-title"><i class="fas fa-users"></i> পারিবারিক পরিচিতি</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3>👨‍👩‍👧‍👦 পরিবারের সদস্য</h3>
+        <p><strong>পিতা:</strong> আব্দুল মাজেদ (শিক্ষক ও ব্যবসায়ী - ফার্মেসি)</p>
+        <p><strong>মাতা:</strong> ইন্তেকাল করেছেন (১৪ ডিসেম্বর ২০২৪) - রহমতুল্লাহি আলাইহা</p>
+        <p><strong>ভাই:</strong> ৩ জন</p>
+        <ul>
+          <li>১ম ভাই: সেকেন্ড ইঞ্জিনিয়ার (মেরিন)</li>
+          <li>২য় ভাই: আব্দুল্লাহ আল মাসুদ (নিজে)</li>
+          <li>৩য় ভাই: মার্কেটিং বিভাগ, রাজশাহী বিশ্ববিদ্যালয়ের শিক্ষার্থী</li>
+          <li>৪র্থ ভাই: আল হাদিস এন্ড ইসলামিক স্টাডিজ, ইসলামী বিশ্ববিদ্যালয় (ছোট ভাই)</li>
+        </ul>
+        <p><strong>বোন:</strong> (সবার বড়) মাওলানা পাশ, বিবাহিত; ভগ্নিপতি প্রিন্সিপাল, পাটকেলঘাটা আল-আমিন ফাজিল মাদ্রাসা।</p>
+      </div>
+      <div class="card">
+        <h3>🧔 চাচা ও মামা</h3>
+        <p><strong>চাচা ৪ জন:</strong> ১ম - হাইস্কুল শিক্ষক (অবঃ) | ২য় - মৃত | ৩য় - আমার পিতা | ৪র্থ - ব্যবসায়ী ও মুয়াজ্জিন</p>
+        <p><strong>মামা ৪ জন:</strong> ১ম - ভাইস প্রিন্সিপাল (অবঃ) ও ব্যবসায়ী (IBBL Agent) | ২য় - কৃষক | ৩য় - সুপার ও ব্যবসায়ী | ৪র্থ - হাফেজ ও শিক্ষক (ই.ফা.)</p>
+        <hr>
+        <p><strong>পারিবারিক অবস্থা:</strong> মধ্যবিত্ত, দ্বীনি পরিবেশ ও জ্ঞান চর্চার ধারা বজায় রাখে। বড় বোনের স্বামী একজন মাদ্রাসা শিক্ষাবিদ।</p>
+        <p><i class="fas fa-hand-sparkles"></i> পরিবারের সবার আন্তরিক দোয়া ও সহযোগিতায় এগিয়ে চলছি।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Training & extracurricular -->
+<section class="section" id="training">
+  <div class="container">
+    <div class="section-title"><i class="fas fa-microphone-alt"></i> বিশেষ প্রশিক্ষণ ও কোর্সসমূহ</div>
+    <div class="grid-2">
+      <div class="card">
+        <h3><i class="fas fa-laptop"></i> আইটি ও সফটস্কিল</h3>
+        <p>✔️ Office Application (কম্পিউটার প্রশিক্ষণ)<br>
+        ✔️ ইংরেজি ভাষা শিক্ষা কোর্স | Leader Zone, Dhaka<br>
+        ✔️ ডিবেট ও পাবলিক স্পিকিং - সাদ্দাম হোসেন হল ডিবেটিং সোসাইটি <br>
+        ✔️ সংগঠন ও নেতৃত্ব প্রশিক্ষণ (হল সংস্কৃতি ও ডিবেট বাংলাদেশ)</p>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-quran"></i> ইসলামিক কোর্সসমূহ</h3>
+        <p>📖 আরবি ভাষা শিক্ষা কোর্স (DRTC, ঝিনাইদহ)<br>
+        📖 তরজমাতুল কুরআন ওয়াত-তাফসীর - DRTC <br>
+        📖 হাদিস ও উলুমুল হাদিস (DRTC ঝিনাইদহ) <br>
+        📖 স্বশিক্ষিত কুরআন গবেষণা ও তাফসির অধ্যয়ন।<br>
+        📖 কামিল পর্যায়ে হাদীস শাস্ত্রে গভীরতা অর্জন (চলমান)</p>
+        <div class="quote">
+          <i class="fas fa-pray"></i> “ইলম অর্জন প্রত্যেক মুসলিমের ফরজ” — হাদীসের আলোয় দাওয়াহ কার্যক্রমে নিয়মিত অংশগ্রহণ।
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Social -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-title"><i class="fas fa-address-book"></i> যোগাযোগ ও সংযোগ</div>
+    <div class="card" style="text-align: center;">
+      <p><i class="fas fa-envelope" style="color: var(--primary-green);"></i> <strong>ইমেইল:</strong> abdullah.almasud@stud.iu.ac.bd (ব্যক্তিগত ও একাডেমিক)</p>
+      <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> +880 17XX-XXXXXX (যোগাযোগের জন্য ব্যবস্থাপনায়) &nbsp;|&nbsp; <i class="fas fa-phone-alt"></i> <strong>মোবাইল:</strong> প্রদান সাপেক্ষে</p>
+      <div class="social-icons" style="margin: 1.5rem 0; display: flex; gap: 1.5rem; justify-content: center;">
+        <a href="#" style="color: var(--text-muted); font-size: 1.6rem;"><i class="fab fa-facebook"></i></a>
+        <a href="#" style="color: var(--text-muted); font-size: 1.6rem;"><i class="fab fa-linkedin"></i></a>
+        <a href="#" style="color: var(--text-muted); font-size: 1.6rem;"><i class="fab fa-github"></i></a>
+        <a href="#" style="color: var(--text-muted); font-size: 1.6rem;"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p><i class="fas fa-map-marker-alt"></i> <strong>স্থায়ী ঠিকানা:</strong> ভালুকা চাঁদপুর, সাতক্ষীরা সদর, সাতক্ষীরা। <br>
+      <strong>বর্তমান অবস্থান:</strong> ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়া - হলে অবস্থানরত।</p>
+      <hr>
+      <p style="font-size: 0.85rem;">আল হাদিস ও ইসলামিক স্টাডিজ বিভাগ, ইসলামী বিশ্ববিদ্যালয়, কুষ্টিয়া। পরিবার ও উম্মাহর জন্য সচেষ্ট।</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div><i class="fas fa-leaf" style="color: var(--primary-green);"></i> আব্দুল্লাহ আল মাসুদ | হাফেজ ও হাদীস গবেষক</div>
+  <p style="margin-top: 0.5rem;">© ২০২৬ | নিজস্ব পোর্টফোলিও | নির্মিত দ্বীনি চেতনায়</p>
+</footer>
+
+<script>
+  // simple scroll reveal for cards
+  const cards = document.querySelectorAll('.card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0px)';
+      }
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(card => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'all 0.6s ease-out';
+    observer.observe(card);
+  });
+</script>
+
+</body>
+</html>
