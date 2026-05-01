@@ -48,7 +48,7 @@ A premium, responsive, and aesthetically pleasing personal profile web applicati
 ## 👤 Credits
 
 *   **Profile Owner:** Abdullah Al Masud
-*   **Developer:** [MD. TASNEM AL-HUJAIFA MIRAZ](https://md-tasnem.github.io/MD.TASNEM-AL-HUJAIFA-MIRAZ./)
+*   **Developer:** [MD. TASNEM AL-HUJAIFA MIRAZ](https://md-tasnem.github.io/MD.TASNEM-AL-HUJAIFA-MIRAZ)
 
 ---
 *Generated with ❤️ for the pursuit of Knowledge and Dawah.*
